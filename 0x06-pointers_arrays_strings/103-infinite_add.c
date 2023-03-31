@@ -1,4 +1,4 @@
-nclude "main.h"
+#include "main.h"
 
 /**
  * rev_string - reverse array
@@ -62,7 +62,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		if (temp_tot >= 10)
 			overflow = 1;
 		else
-			verflow = 0;
+			overflow = 0;
 		if (digits >= (size_r - 1))
 			return (0);
 		*(r + digits) = (temp_tot % 10) + '0';
