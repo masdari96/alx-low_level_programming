@@ -1,4 +1,4 @@
-nclude "main.h"
+#include "main.h"
 #include <stdio.h>
 
 /**
@@ -13,7 +13,7 @@ void print_buffer(char *b, int size)
 	int o, j, i;
 
 	o = 0;
-	
+
 	if (size <= 0)
 	{
 		printf("\n");
@@ -36,10 +36,14 @@ void print_buffer(char *b, int size)
 		}
 		for (i = 0; i < j; i++)
 		{
-			int c = *(b + o + i);										if (c < 32 || c > 132)										{
-				c = '.';										}
-															printf("%c", c);
-														}
+			int c = *(b + o + i);
+
+			if (c < 32 || c > 132)
+			{
+				c = '.';
+			}
+			printf("%c", c);
+		}
 		printf("\n");
 		o += 10;
 	}
